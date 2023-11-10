@@ -5,12 +5,6 @@ int main(){
 	scanf("%d %d %d",&a,&b,&c);
 	int max = ( a > b && a > c )?a: (( b > c )?b:c);
 	int min = ( a < b && a < c )?a: (( b < c )?b:c);
-	if((max>a) && (min<a)){
-		int soconlai = a;
-	}else if((max>b) && (min<b)){
-		int soconlai = b;
-	}else if((max>c) && (min<c)){
-		int soconlai = c;
-	} 
+	soconlai = (a+b+c) - (max+min); 
 	printf("sap xep giam dan: %d %d %d",max,soconlai,min);
 }
