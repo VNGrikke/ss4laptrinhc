@@ -1,8 +1,16 @@
 #include<stdio.h>
 int main(){
-	int a,b,c;
-	printf("nhap vao 3 so: ",a,b,c);
+	int a,b,c,soconlai;
+	printf("nhap vao 3 so: ");
+	scanf("%d %d %d",&a,&b,&c);
 	int max = ( a > b && a > c )?a: (( b > c )?b:c);
-	printf("max:%d",max);
 	int min = ( a < b && a < c )?a: (( b < c )?b:c);
-	printf("\nmin:%d",min); 
+	if((max>a) && (min<a)){
+		int soconlai = a;
+	}else if((max>b) && (min<b)){
+		int soconlai = b;
+	}else if((max>c) && (min<c)){
+		int soconlai = c;
+	} 
+	printf("sap xep giam dan: %d %d %d",max,soconlai,min);
+}
